@@ -61,7 +61,6 @@ class UserController extends AbstractController
      */
     public function editAction(User $user, 
     Request $request,
-    EntityManagerInterface $em,
     UserPasswordHasherInterface $hacher
     ):Response
     {

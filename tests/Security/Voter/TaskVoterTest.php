@@ -54,31 +54,12 @@ class TaskVoterTest extends TestCase
 
     public function provideCases(): ?\Generator
     {
-        // yield 'anonymous cannot delete' => [
-        //     ['DELETE'],
-        //     new Task($this->createUser(1)),
-        //     null,
-        //     VoterInterface::ACCESS_DENIED
-        // ];
-
-        // yield 'non-owner cannot delete' => [
-        //     ['DELETE'],
-        //     new Task($this->createUser(1)),
-        //     $this->createUser(2),
-        //     VoterInterface::ACCESS_DENIED
-        // ];
-
-        // yield 'owner can delete' => [
-        //     ['DELETE'],
-        //     new Task($this->createUser(1)),
-        //     $this->createUser(1),
-        //     VoterInterface::ACCESS_GRANTED
-        // ];
+        
 
         yield 'Admin peut supprimer une tâche Anonyme' => [
             $this->createUserRoles(2, 'ROLE_ADMIN'),
-            $task = $this->createTask(Null),
-            $attribute = ['DELETE'],
+            // $task = $this->createTask(Null),
+            // $attribute = ['DELETE'],
             TaskVoter::ACCESS_GRANTED,
         ];
 
@@ -89,7 +70,7 @@ class TaskVoterTest extends TestCase
             TaskVoter::ACCESS_GRANTED,
         ];
 
-        yield 'User ne peut pas supprimer une tâche de un autre user ' => [
+        yield 'User ne peut pas supprimer une tâche d un autre user ' => [
             $this->createUser(2),
             $task = $this->createTask($this->createUser(4)),
             $attribute = ['DELETE'],
