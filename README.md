@@ -1,6 +1,7 @@
 # Améliorez une application existante de ToDo & Co
 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/21e335419f534a31a0afd8b2b662f910)](https://app.codacy.com/gh/knouz15/projet8-TodoList?utm_source=github.com&utm_medium=referral&utm_content=knouz15/projet8-TodoList&utm_campaign=Badge_Grade_Settings)
 [![SymfonyInsight](https://insight.symfony.com/projects/7a29dd28-b529-4a40-aa4f-cb4d5e780faf/big.svg)](https://insight.symfony.com/projects/7a29dd28-b529-4a40-aa4f-cb4d5e780faf)
 
 
