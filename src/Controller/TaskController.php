@@ -34,10 +34,10 @@ class TaskController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $task->setUser($this->getUser());
-            $em = $this->getDoctrine()->getManager();
+            $emi = $this->getDoctrine()->getManager();
 
-            $em->persist($task);
-            $em->flush();
+            $emi->persist($task);
+            $emi->flush();
 
             $this->addFlash('success', 'La tâche a été bien été ajoutée.');
 
@@ -92,9 +92,9 @@ class TaskController extends AbstractController
         // TaskVoter::DELETE
         'DELETE'
         , $task, 'Denied! Vous ne pouvez pas supprimer cette tâche');
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($task);
-        $em->flush();
+        $emi = $this->getDoctrine()->getManager();
+        $emi->remove($task);
+        $emi->flush();
 
         $this->addFlash('success', 'La tâche a bien été supprimée.');
         
