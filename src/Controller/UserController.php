@@ -21,7 +21,6 @@ class UserController extends AbstractController
 {
       /**
      * @Route("/users", name="user_list")
-     * @IsGranted("ROLE_ADMIN")
      */
     public function listAction():Response
     {
@@ -30,7 +29,6 @@ class UserController extends AbstractController
 
     /**
      * @Route("/users/create", name="user_create")
-     * @IsGranted("ROLE_ADMIN")
      */
     public function createAction(Request $request, EntityManagerInterface $emi, UserPasswordHasherInterface $hacher):Response
     {
@@ -46,7 +44,6 @@ class UserController extends AbstractController
 
             $emi->persist($user);
             $emi->flush();
-
             $this->addFlash('success', "L'utilisateur a bien été ajouté.");
 
             return $this->redirectToRoute('user_list');
@@ -57,7 +54,6 @@ class UserController extends AbstractController
 
     /**
      * @Route("/users/{id}/edit", name="user_edit")
-     * @IsGranted("ROLE_ADMIN")
      */
     public function editAction(User $user, 
     Request $request,
