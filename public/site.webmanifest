@@ -1,6 +1,6 @@
 {
-    "name": "Snowtricks",
-    "short_name": "Snowtricks",
+    "name": "Todolist",
+    "short_name": "Todolist",
     "lang": "fr",
     "start_url": "/",
     "display": "standalone",
